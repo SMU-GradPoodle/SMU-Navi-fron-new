@@ -357,7 +357,9 @@ export default function DetailTraffic(){
             headers: {
                 'Authorization': 'Bearer ' + token
             },
-            data: {}
+            data: {
+                'password' : editPw
+            }
         }).then((res) => {
             alert('제보글이 삭제되었습니다.');
             navigate('/report_traffic');
@@ -379,7 +381,7 @@ export default function DetailTraffic(){
                 'Authorization': 'Bearer ' + token
             },
             data:{
-                'password' : deletePassword
+                'password' : editPw
             }
         }).then((res) => {
             alert('제보글이 삭제되었습니다.');

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import listBt from './../../img/originHamburger.svg';
 import clickedHam from './../../img/hamburger.svg';
-import logo from './../../img/mobileLogo.svg';
+import logo from './../../img/mSmuNaviLogo.png';
 import { useNavigate } from 'react-router-dom';
 import profile from './../../img/profileIcon.svg';
 import noProfile from './../../img/mobileLogout.png';

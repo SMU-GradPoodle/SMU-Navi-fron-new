@@ -61,8 +61,6 @@ function Write_traffic() {
     }
 
     const onSubmitTraffic = (event) => {
-        // console.log(busList);
-        // console.log(subwayList);
         event.preventDefault();
 
         axios({
@@ -88,7 +86,6 @@ function Write_traffic() {
         .catch((error) => {
             alert('작성하지 않은 내용이 있습니다.');
         });
-
     }
 
     const [inputPw, setInputPw] = useState('');
@@ -127,6 +124,7 @@ function Write_traffic() {
     const setPassword = (e) => {
         setInputPw(e.target.value);
     }
+
     return (
         <div>
             { mobile ?
@@ -162,7 +160,7 @@ function Write_traffic() {
                         {accidentArr.map((elm, index) => (
                             <Catebory_btn
                                 key={index}
-                                isSelected={selectedAccident === elm} // selectedAccident is a string
+                                isSelected={selectedAccident === elm}
                                 handleClick={accidentCategoryClick}
                                 elementIndex={index}
                                 content={elm}
@@ -182,7 +180,6 @@ function Write_traffic() {
                                 backColor="#89B8FF"
                             />
                         ))}
-
                     </div>
                     <div className={"picture_category_wrap"}>
                         <p>위치</p>
