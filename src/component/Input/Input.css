@@ -18,3 +18,8 @@ input{
 #redPwTitle{
     margin: 0;
 }
+
+#sameNameCheckBt{
+    padding: 0;
+    width: 50px;
+}
