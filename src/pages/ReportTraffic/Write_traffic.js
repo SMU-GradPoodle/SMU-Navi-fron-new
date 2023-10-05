@@ -72,9 +72,8 @@ function Write_traffic() {
             },
             data: {
                 "transitType": selectedSubway == '지하철' || selectedSubway == 'SUBWAY' ? 'SUBWAY' : 'BUS',
-                "kind": selectedAccident,
+                "kind": selectedAccidentNum,
                 "stationId": selectedSubwayId,
-                "title": trafficTitle,
                 "content": trafficContent,
                 "password": inputPw
             },
@@ -92,7 +91,8 @@ function Write_traffic() {
     const accidentArr = ['시위', '사고', '버스만석', '우회', '그외'];
     const subwayArr = ['버스', '지하철'];
 
-    const [selectedAccident, setSelectedAccident] = useState(0);
+    const [selectedAccident, setSelectedAccident] = useState('');
+    const [selectedAccidentNum, setSelectedAccidentNum] = useState(0);
     const [selectedSubway, setSelectedSubway] = useState(0);
     const [selectedSubwayId, setSelectedSubwayId] = useState('');
 
@@ -100,10 +100,12 @@ function Write_traffic() {
     const [selectedBusStation, setSelectedBusStation] = useState('');
 
     const accidentCategoryClick = idx => {
-        setSelectedAccident(idx + 1);
+        setSelectedAccident(accidentArr[idx]);
+        setSelectedAccidentNum(idx + 1);
     };
 
     const subwayCategoryClick = idx => {
+        console.log(idx)
         setSelectedSubway(
             idx === 0 ? 'BUS' : 'SUBWAY'
         );
